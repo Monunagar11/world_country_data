@@ -1,0 +1,20 @@
+[
+    {
+        "id":"1",
+        "icon":"FaMapLocationDot",
+        "title":"Find us",
+        "details":"Indore, MP"
+    },
+    {
+        "id":"2",
+        "icon":"MdContacts",
+        "title":"Contact us",
+        "details":"978587XXXX"
+    },
+    {
+        "id":"3",
+        "icon":"MdMarkEmailUnread",
+        "title":"Email us",
+        "details":"worlddt@gmail.com"
+    }
+]
