@@ -40,6 +40,10 @@ li{
   list-style: none;
 }
 
+section{
+  margin-bottom: 10px;
+}
+
 button{
   /* display: inline-block; */
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -132,6 +136,7 @@ header{
 
 .nav-grid{
   grid-template-columns: 0.5fr 1fr;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   height: 6rem;
@@ -149,24 +154,12 @@ nav ul{
 
 .hamburger-menu{
   display: none;
-  visibility: hidden;
-}
-
-@media (width<600px) {
-  nav ul{
-    display: none;
-    visibility: hidden;
-  }
-  .hamburger-menu{
-    display: block;
-    visibility: visible;
-    
-  }
   
 }
 
 .hero-main{
   margin: auto;
+  margin-bottom: 70px;
 }
 
 .hero{
@@ -204,6 +197,8 @@ nav ul{
   font-size: 2.2rem;
   margin: 1rem auto;
 }
+
+
 
 .card-container{
   margin: 2rem auto;
@@ -354,8 +349,70 @@ form input, form textarea {
   .container{
     max-width: 90%;
   }
+
+  .grid-two-cols{
+  grid-template-columns: 1fr;
+}
   .card-container{
     grid-template-columns: repeat(auto-fit,1fr);
   }
+  .hero-banner{
+  display: none;
 }
 
+}
+
+@media (width<600px) {
+  .hamburger-menu {
+        display: flex;
+        align-items: end;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    .h-icon {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .nav-grid nav {
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%); 
+        transition: transform 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+    .nav-grid nav.active {
+        transform: translateX(0);
+    }
+    
+    .nav-grid nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .nav-grid nav a {
+        color: white;
+        font-size: 2rem;
+    }
+
+     .card-container{
+    grid-template-columns: 1fr;
+  }
+
+  .footer-contact{
+    grid-template-columns: repeat(1,1fr);
+
+  }
+  
+}

@@ -34,8 +34,6 @@ export const Country= ()=>{
             const searchData = search?countris.filter((curr)=>
                     curr.name?.common?.toLowerCase().includes(search.toLowerCase())
                 ):countris;
-
-                console.log(searchData)
             
 
             const sortByPopulation = async(order) => {
